@@ -6,7 +6,7 @@ class HelloYou extends StatefulWidget {
 }
 
 class _HelloYouState extends State<HelloYou> {
-  String name = 'test';
+  String name = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +19,8 @@ class _HelloYouState extends State<HelloYou> {
           child: Column(
             children: [
               TextField(
+                decoration:
+                    InputDecoration(hintText: "Please insert your name"),
                 onChanged: (String string) {
                   setState(() {
                     name = string;
